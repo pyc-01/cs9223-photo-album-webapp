@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- AWS APIGateway SDK -->
+        <script src="./assets/js/sdk/lib/axios/dist/axios.standalone.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/components/hmac.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+        <script src="./assets/js/sdk/lib/url-template/url-template.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
+
+        <script src="./assets/js/sdk/apigClient.js"></script>
+
+        <script src="./assets/js/aws-sdk.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Photo Album WebApp</h1>
+        </div>
+
+        <div style="text-align: center;">
+            <form id="search-photos">
+                <input type="text" id="query" name="query" placeholder="Search Photos" autocomplete="off">
+                <button id="search-photos" name="search-photos" onclick="search_photos()">Search</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Search Results: </h3>
+        </div>
+        <div id="search-results"></div>
+
+        <div class="upload-photo">
+            <h3>Upload Photos and Labels</h3>
+            <form id="photo-upload">
+                <input type="file" id="filename" name="filename">
+                <input type="text" id="custom_labels" name="custom_labels" placeholder="Enter Custom Labels">
+                <button id="upload-file" name="upload-file" onclick="upload_photos(event)">Submit</button>
+            </form>
+        </div>
+
+        <!-- chat.js -->
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
